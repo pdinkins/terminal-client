@@ -9,7 +9,8 @@ class Interface:
     """
     Terminal Interface
     """
-    def __init__(self):
+    def __init__(self, md):
+        self.__menu_dict = md
         self.__operating_system = platform.system()
     
     # Horizontal Title Bar
@@ -32,6 +33,11 @@ class Interface:
             os.system('clear')
         elif self.__operating_system == 'Windows':
             os.system('cls')
+
+    def menu(self):
+        pass
+
+
 
     # Clears the screen then displays the title bar
     def display(self):
